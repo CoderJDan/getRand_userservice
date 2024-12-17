@@ -1,0 +1,21 @@
+server:
+  port: 5002
+
+spring:
+  application:
+    name: getRand_userservice
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://127.0.0.1:3306/myerp?serverTimezone=UTC
+    username: root
+    password: 1234
+
+eureka:
+  client:
+    fetch-registry: true
+    register-with-eureka: true
+    service-url:
+      defaultZone: http://127.0.0.1:8761/eureka
+  instance:
+    # 2??? ????? ???? ??? ??? ??? ??
+    lease-expiration-duration-in-seconds: 2
