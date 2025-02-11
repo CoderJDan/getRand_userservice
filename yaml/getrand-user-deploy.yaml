@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: user
+  namespace: getrand
+  labels:
+    service: userservice
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      service: userservice
+  template:
+    metadata:
+      labels:
+        service: userservice
+    spec:
+      containers:
+        - name: userservice
+          image: jangdaniel/getrand-user-service:v1.0.8
+          ports:
+            - containerPort: 5002

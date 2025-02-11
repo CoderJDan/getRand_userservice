@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: userservice
+  namespace: getrand
+  labels:
+    service: userservice
+spec:
+  selector:
+    service: userservice
+  ports:
+    - port: 5002
+      targetPort: 5002
+  type: ClusterIP
