@@ -6,7 +6,7 @@ spring:
     name: userservice
   datasource:
     driver-class-name: com.mysql.cj.jdbc.Driver
-    url: jdbc:mysql://127.0.0.1:3306/getrand?serverTimezone=Asia/Seoul
+    url: jdbc:mysql://192.168.0.70:3306/getrand?serverTimezone=Asia/Seoul
     username: mytest
     password: 1234
 

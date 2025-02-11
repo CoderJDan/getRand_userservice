@@ -14,4 +14,4 @@ WORKDIR /myapp
 
 COPY --from=build /myapp/build/libs/*.jar /myapp/getRand_userservice.jar
 EXPOSE 5002
-ENTRYPOINT ["java","-jar","/basic_test.jar"]
+ENTRYPOINT ["java","-jar","/myapp/getRand_userservice.jar"]
